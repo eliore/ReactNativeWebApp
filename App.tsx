@@ -1,7 +1,7 @@
-import React from 'react';
-import {Dimensions, StyleSheet, Text, View} from 'react-native';
+import React from "react";
+import { Dimensions, StyleSheet, Text, View } from "react-native";
 
-const {height} = Dimensions.get('screen');
+const { height } = Dimensions.get("screen");
 
 const App = () => {
   return (
@@ -15,13 +15,13 @@ const App = () => {
 
 const styles = StyleSheet.create({
   container: {
-    height,
+    height
   },
   center: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
+    justifyContent: "center",
+    alignItems: "center"
+  }
 });
 
 export default App;

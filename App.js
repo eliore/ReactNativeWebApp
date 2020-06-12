@@ -5,7 +5,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const react_1 = __importDefault(require("react"));
 const react_native_1 = require("react-native");
-const { height } = react_native_1.Dimensions.get('screen');
+const { height } = react_native_1.Dimensions.get("screen");
 const App = () => {
     return (react_1.default.createElement(react_native_1.View, { style: styles.container },
         react_1.default.createElement(react_native_1.View, { style: styles.center },
@@ -13,12 +13,12 @@ const App = () => {
 };
 const styles = react_native_1.StyleSheet.create({
     container: {
-        height,
+        height
     },
     center: {
         flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
-    },
+        justifyContent: "center",
+        alignItems: "center"
+    }
 });
 exports.default = App;

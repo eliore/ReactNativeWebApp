@@ -22,11 +22,15 @@
     "react-native-vector-icons": "6.6.0",
     "react-native-web": "0.12.3",
     "react-router": "5.2.0",
+    "react-router-native": "5.2.0",
     "react-router-dom": "5.2.0"
   },
   "devDependencies": {
     "@babel/core": "7.10.2",
     "@babel/runtime": "7.10.2",
+    "@babel/preset-typescript": "7.10.1",
+    "@babel/plugin-transform-runtime": "^7.10.1",
+    "@babel/plugin-proposal-decorators": "^7.10.1",
     "@react-native-community/eslint-config": "2.0.0",
     "@types/react": "16.9.36",
     "@types/react-native": "0.62.13",
@@ -34,6 +38,7 @@
     "@types/react-dom": "16.9.8",
     "@types/lodash": "4.14.155",
     "@types/react-router": "5.1.7",
+    "@types/react-router-native": "5.1.0",
     "@types/react-router-dom": "5.1.5",
     "@types/react-native-vector-icons": "6.4.5",
     "babel-jest": "26.0.1",
@@ -55,6 +60,22 @@
     "webpack-dev-server": "3.11.0"
   },
   "jest": {
-    "preset": "react-native"
+    "preset": "react-native",
+    "moduleFileExtensions": ["ts", "tsx", "js"],
+    "testRegex": "(/tests/.*|\\.(test|spec))\\.(ts|tsx|js)$",
+    "testPathIgnorePatterns": ["\\.snap$"],
+    "cacheDirectory": ".jest/cache",
+    "transformIgnorePatterns": [
+      "node_modules/(?!react-native|react-navigation|victory|rn-placeholder).+\\.js$"
+    ],
+    "moduleDirectories": ["<rootDir>", "node_modules"],
+    "transform": {
+      "^.+\\.(ts|tsx|js)$":
+      "<rootDir>/node_modules/react-native/jest/preprocessor.js",
+      "\\.(ts|tsx)$": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+    }
+  },
+  "prettier": {
+    "printWidth": 80
   }
 }

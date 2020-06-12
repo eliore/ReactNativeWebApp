@@ -2,15 +2,15 @@
   "extends": ["tslint-react-recommended"],
   "rules": {
     "ordered-imports": [true],
-    "quotemark": [true, "single", "jsx-single", "avoid-escape"],
-    "semicolon": [true, "never"],
+    "quotemark": [true, "double", "jsx-double", "avoid-escape"],
+    "semicolon": [false, "never"],
     "member-access": [false],
     "member-ordering": [false],
     "trailing-comma": [
       true,
       {
         "singleline": "never",
-        "multiline": "always"
+        "multiline": "never"
       }
     ],
     "no-empty": false,
