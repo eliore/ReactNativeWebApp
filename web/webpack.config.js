@@ -19,7 +19,17 @@ module.exports = {
       {
         test: /\.(tsx|ts|jsx|js|mjs)$/,
         exclude: /node_modules/,
-        loader: 'ts-loader',
+        loader: 'babel-loader',
+        options: {
+          presets: ["@babel/preset-env",
+            "@babel/preset-react",
+            "@emotion/babel-preset-css-prop",
+            "@babel/preset-typescript"],
+          plugins: ["@babel/plugin-transform-runtime",
+            "@babel/plugin-proposal-class-properties",
+            "@babel/plugin-proposal-object-rest-spread",
+            ["@babel/plugin-proposal-decorators", { legacy: true }]]
+        }
       },
     ],
   },
