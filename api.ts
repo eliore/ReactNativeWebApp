@@ -22,7 +22,6 @@ export function fetchUrl({
     params,
     baseUrl: "",
     authToken: AuthUserStore.authToken,
-    jwtToken: AuthUserStore.jwtToken,
     authType
   });
 }

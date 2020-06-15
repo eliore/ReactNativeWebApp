@@ -1,5 +1,5 @@
 import AuthUserStoreShared from "stores/abstracts/auth-user.store";
-import { IUser } from "typescript/models/model.types";
+import { IUser } from "typescript/model.types";
 import { IAuthUserStore } from "typescript/store.types";
 
 import { getAPI } from "../api";

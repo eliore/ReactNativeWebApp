@@ -1,16 +1,25 @@
-export interface IClient {
+export interface IKeyValue {
   id: number;
-  company_name: string;
+  name: string;
 }
 
-export interface IUser extends IClient {
+export interface IPerson {
+  id: number;
+  tz?: string;
   first_name: string;
-  last_name: string;
+  last_name?: string;
+  phone?: string;
+  mobile: string;
+  email?: string;
+}
+
+export interface IWorker extends IPerson{
+  user_name: string;
+  chain_id?: number | null;
+  branch_id?: number | null;
   role: string;
+}
+
+export interface IUser extends IWorker{
   authentication_token: string;
-  email: string;
-  metric_units: boolean;
-  accessible_users_count: number;
-  jwt_token: string;
-  settings?: Record<string, any>;
 }

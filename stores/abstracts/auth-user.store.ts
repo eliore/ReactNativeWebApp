@@ -45,15 +45,11 @@ class AuthUserStore<AuthUser extends IUser>
       first_name: user.first_name,
       last_name: user.last_name,
       role: user.role,
-      company_name: user.company_name,
       id: user.id,
       email: user.email,
-      metric_units: !!user.metric_units,
-      jwt_token: user.jwt_token ? user.jwt_token : oldUser.jwt_token,
       authentication_token: isLogin
         ? response.api_token
-        : user.authentication_token || oldUser.authentication_token || "",
-      settings: response.settings || this.options.default_settings
+        : user.authentication_token || oldUser.authentication_token || ""
     };
 
     return authUser;
@@ -67,18 +63,6 @@ class AuthUserStore<AuthUser extends IUser>
   @computed
   get authToken() {
     return this.authUser ? this.authUser.authentication_token : "";
-  }
-
-  @computed
-  get jwtToken() {
-    return this.authUser ? this.authUser.jwt_token : "";
-  }
-
-  @computed
-  get settings() {
-    return this.authUser
-      ? this.authUser.settings || this.options.default_settings
-      : this.options.default_settings;
   }
 
   @action.bound

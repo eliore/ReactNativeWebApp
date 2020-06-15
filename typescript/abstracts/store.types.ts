@@ -14,12 +14,10 @@ export interface IAuthUserStore<IUser> {
   loginError: boolean;
   signedIn: boolean;
   authToken: string;
-  jwtToken: string;
   initFromLocalStorage: () => void;
   signIn: (username: string, password: string) => Promise<any>;
   autoSignIn: () => Promise<any>;
   signOut: () => Promise<any>;
-  settings: any;
 }
 
 export interface IAppStore<IAuthUserStoreParam> {
