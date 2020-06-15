@@ -8,4 +8,3 @@ require("@babel/runtime/helpers/esm/initializerDefineProperty");
 configure({ enforceActions: "always" });
 
 AppRegistry.registerComponent(appName, () => App);
-

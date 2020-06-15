@@ -1,0 +1,25 @@
+{
+  "models": [
+    {
+      "name": "nameModel",
+      "model": {
+
+      }
+    }
+  ],
+  "apis": [
+    {
+      "name": "api name",
+      "source": "node Api",
+      "url": "../api/v1/list",
+      "parameters": [
+        {
+          "name": "param_name",
+          "type": "type",
+          "optional": true
+        }
+      ],
+      "response": "{...nameModel}"
+    }
+  ]
+}

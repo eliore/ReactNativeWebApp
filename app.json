@@ -1,4 +1,6 @@
 {
   "name": "ReactNativeWebApp",
-  "displayName": "ReactNativeWebApp"
+  "displayName": "ReactNativeWebApp",
+  "storybookMode": false,
+  "apiMode": "dev"
 }
